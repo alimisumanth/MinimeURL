@@ -1,0 +1,13 @@
+cachelib==0.1.1
+certifi==2020.12.5
+click
+dnspython==1.16.0
+Flask
+Flask-Session==0.3.2
+itsdangerous
+Jinja2
+MarkupSafe==1.1.1
+pymongo==3.11.2
+Werkzeug
+wincertstore==0.2
+gunicorn

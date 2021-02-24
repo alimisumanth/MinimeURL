@@ -1,0 +1,22 @@
+{% extends "admin.html" %}
+
+{% block res %}
+    No of User : {{ users }}<br/>
+    Number of links : {{ noflinks }}<br/>
+    Highest number of visits for a link:<br/>
+    <table border="2px solid">
+    <tr>
+       <td>Original link</td>
+        <td>Minime Link</td>
+        <td>Number of visits</td>
+    </tr>
+    <tr>
+       <td>{{ olink }}</td>
+        <td>{{ tlink }}</td>
+        <td>{{ highest }}</td>
+    </tr>
+    </table>
+
+
+
+{% endblock %}

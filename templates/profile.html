@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<h2>Profile Page</h2>
+<div>
+    <p>Your account details are below:</p>
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td>{{ account['Username'] }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ account['email'] }}</td>
+        </tr>
+    </table>
+</div>
+ <div>
+ <table border="2px solid">
+ <tr>
+     <th>SL. No</th>
+     <th>Original URL</th>
+     <th>Minime URL</th>
+     <th>No of Visits</th>
+ </tr>
+{% for i in userinfo %}
+    <tr>
+        <td style="text-align: center" >{{ loop.index }}</td>
+        <td style="text-align: center" >{{ i.get('OriginalUrl') }}</td>
+        <td style="text-align: center" >{{ i.get('turl') }}</td>
+        <td style="text-align: center" >{{ i.get('nov') }}</td>
+
+    </tr>
+{% endfor %}
+ </table>
+        </div>
+
+{% endblock %}

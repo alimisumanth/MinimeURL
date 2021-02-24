@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        .navtop {
+  	display: flex;
+  	margin: 0 auto;
+  	width: 100%
+}
+#content {
+  overflow:auto;
+  width: 100%;
+    height:95%;
+  background: gray;
+}
+
+#left{
+  width: 50%;
+  margin:5px;
+  padding: 1em;
+    height: 95%;
+  background: white;
+}
+#right{
+     width: 48%;
+  margin:5px;
+    height: 95%;
+  padding: 1em;
+  background: white;
+}
+
+#left,#lefta  { float:left;  }
+#right,#righta { float:right; }
+    </style>
+	</head>
+<body >
+
+<div class="navtop">
+  <div id="lefta">  <h1 style="color: #dee0e4;">Website Title</h1>
+  </div>
+    <div id="righta">
+    <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
+</div>
+
+<div id="content">
+<div id="left">
+<form method="post" action="/tinyurl" style="text-align: center;margin-top: 150px">
+    <label>Enter the URL</label><input name="Url">
+    <button type="submit">Submit</button>
+</form>
+    {{ res }}
+</div>
+<div id="right">
+  <form method="post" action="/admin" style="text-align: center">
+      <label>Get analytics</label>
+  <input type="submit">
+  </form>
+    {% block res %}
+{% endblock %}
+</div>
+
+</div>
+</body>
+</html>

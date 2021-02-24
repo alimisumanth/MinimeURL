@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome {{ username }}!</p>
+<form method="post" action="/tinyurl" style="text-align: center;margin-top: 150px">
+    <label>Enter the URL</label><input name="Url">
+    <button type="submit">Submit</button>
+
+</form>
+    <h1>{{ urls }}</h1>
+{% endblock %}
