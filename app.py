@@ -25,8 +25,8 @@ app.config['SESSION_TYPE'] = 'filesystem'
 DEFAULT_CONNECTION_URL = "mongodb://localhost:27017/"
 User_DB = "minimeUrl"
 # Establish a connection with mongoDB
-#client = pymongo.MongoClient(DEFAULT_CONNECTION_URL)
-client = pymongo.MongoClient("mongodb+srv://admin:dbroot@cluster0.mkrgt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient(DEFAULT_CONNECTION_URL)
+#client = pymongo.MongoClient("mongodb+srv://admin:dbroot@cluster0.mkrgt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 # Create a DB
 UserdataBase = client[User_DB]
 UserCol = UserdataBase["UserDb"]
